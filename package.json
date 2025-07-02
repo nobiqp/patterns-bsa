@@ -2,7 +2,10 @@
   "name": "bsa-patterns-hw",
   "version": "0.0.0",
   "description": "Starter for Patterns Practises and Principles homework. Binary Studio Academy",
-  "scripts": {},
+  "scripts": {
+    "build:server": "npm run build --workspace=server",
+    "start:server": "npm start --workspace=server"
+  },
   "author": "Vitalii Yarmus",
   "license": "MIT",
   "workspaces": [
@@ -10,8 +13,8 @@
     "server"
   ],
   "engines": {
-    "node": ">=16 <17",
-    "npm": ">=8 <9"
+    "node": ">=16",
+    "npm": ">=8"
   },
   "devDependencies": {
     "typescript": "4.9.5"
