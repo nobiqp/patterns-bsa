@@ -9,7 +9,7 @@ type Props = {
 
 const CopyButton = ({ onClick }: Props) => {
   const theme = useTheme();
-  
+
   return (
     <Button className="copy-btn" onClick={onClick} color={theme.colors.N30}>
       <Icon iconName="copy" />

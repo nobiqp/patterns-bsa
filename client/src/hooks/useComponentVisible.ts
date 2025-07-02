@@ -6,8 +6,7 @@ export function useComponentVisible(initialIsVisible = false): {
   isComponentVisible: boolean;
   setIsComponentVisible: Dispatch<SetStateAction<boolean>>;
 } {
-  const [isComponentVisible, setIsComponentVisible] =
-    useState(initialIsVisible);
+  const [isComponentVisible, setIsComponentVisible] = useState(initialIsVisible);
   const ref = useRef<HTMLDivElement>(null);
 
   const handleHideDropdown = (event: KeyboardEvent): void => {

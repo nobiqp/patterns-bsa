@@ -1,6 +1,6 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
-import { SPACE_IN_PX } from "../../../common/constants/constants";
+import { SPACE_IN_PX } from '../../../common/constants/constants';
 
 const ListWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.N30}

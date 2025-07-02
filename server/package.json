@@ -3,14 +3,25 @@
   "version": "0.0.0",
   "description": "Starter for Patterns Practises and Principles homework. Binary Studio Academy",
   "scripts": {
-    "start": "nodemon ./src/index.ts"
+    "start": "nodemon ./src/index.ts",
+    "lint": "eslint src --ext .ts --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "format": "prettier --write \"src/**/*.{ts,js,json,md}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,js,json,md}\""
   },
   "author": "Vitalii Yarmus",
   "license": "MIT",
   "devDependencies": {
+    "@eslint/js": "^9.30.1",
     "@types/node": "18.13.0",
     "@types/socket.io": "3.0.2",
+    "@typescript-eslint/eslint-plugin": "^8.35.1",
+    "@typescript-eslint/parser": "^8.35.1",
+    "eslint": "^9.30.1",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.5.1",
     "nodemon": "2.0.20",
+    "prettier": "^3.6.2",
     "ts-node": "10.9.1"
   },
   "dependencies": {

@@ -6,7 +6,7 @@ import { TitleContainer } from './styled/title-container';
 import { TitleInput } from './styled/title-input';
 
 type Props = {
-  fontSize: "x-large" | "large" | "medium";
+  fontSize: 'x-large' | 'large' | 'medium';
   isBold?: boolean;
   title: string;
   width?: number;
@@ -14,8 +14,7 @@ type Props = {
 };
 
 export const Title = ({ onChange, title, fontSize, isBold, width }: Props) => {
-  const { ref, isComponentVisible, setIsComponentVisible } =
-    useComponentVisible(false);
+  const { ref, isComponentVisible, setIsComponentVisible } = useComponentVisible(false);
   const [value, setValue] = useState(title);
 
   useEffect(() => setValue(title), [title]);
@@ -39,11 +38,17 @@ export const Title = ({ onChange, title, fontSize, isBold, width }: Props) => {
           width={width ?? 250}
         />
       ) : (
-        <BasicTitle
-          className="title-content"
+        <BasicTitle 
+          className="title-content" 
           onClick={() => setIsComponentVisible(true)}
+          style={{ 
+            color: value ? 'inherit' : '#888', 
+            fontStyle: value ? 'normal' : 'italic',
+            minHeight: '1.2em',
+            cursor: 'pointer'
+          }}
         >
-          {value}
+          {value || 'Click to add title...'}
         </BasicTitle>
       )}
     </TitleContainer>

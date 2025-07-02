@@ -1,4 +1,5 @@
 import { List } from './models/list';
+import { ModelFactory } from './utils/model-factory';
 
 class Database {
   private static instance: Database | null = null;
@@ -18,11 +19,13 @@ class Database {
   }
 
   public setData(data: List[]): void {
-    this.data = data;
+    // Ensure all data are proper List instances
+    this.data = ModelFactory.ensureListInstances(data);
   }
 
   public getData(): List[] {
-    return this.data;
+    // Ensure all returned data are proper List instances
+    return ModelFactory.ensureListInstances(this.data);
   }
 }
 

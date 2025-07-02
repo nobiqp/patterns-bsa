@@ -1,7 +1,7 @@
-import styled from "@emotion/styled";
-import { DraggableProvidedDragHandleProps } from "@hello-pangea/dnd";
+import styled from '@emotion/styled';
+import { DraggableProvidedDragHandleProps } from '@hello-pangea/dnd';
 
-import { BORDER_RADIUS } from "../../../common/constants/constants";
+import { BORDER_RADIUS } from '../../../common/constants/constants';
 
 type Props = (DraggableProvidedDragHandleProps | object) & {
   isDragging: boolean;

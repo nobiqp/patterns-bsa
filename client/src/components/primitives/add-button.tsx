@@ -1,6 +1,6 @@
 import { Icon } from '../icon/icon';
 import { Button } from './styled/button';
-import {theme} from "../../theme/theme";
+import { theme } from '../../theme/theme';
 
 type Props = {
   onClick: () => void;

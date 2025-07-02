@@ -7,9 +7,5 @@ interface ThemeProviderProps {
 }
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  return (
-    <EmotionThemeProvider theme={theme}>
-      {children}
-    </EmotionThemeProvider>
-  );
+  return <EmotionThemeProvider theme={theme}>{children}</EmotionThemeProvider>;
 };
